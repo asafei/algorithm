@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { insertionsort , shellsort , heapsort } from './common/index.js';
+import { insertionsort , shellsort , heapsort , mergesort} from './common/index.js';
 
 
 
@@ -15,11 +15,15 @@ function component() {
   let C=[2,6,1,7,0,3,5,9,4,8];
   heapsort(C,n);
 
+  let D=[2,6,1,7,0,3,5,9,4,8];
+  mergesort(D,n);
+
 
   // Lodash, currently included via a script, is required for this line to work
   //element.innerHTML = _.join(['insertionsort', A], ' ');
   //element.innerHTML = _.join(['shellsort', B], ' ');
-  element.innerHTML = _.join(['heapsort', C], ' ');
+  //element.innerHTML = _.join(['heapsort', C], ' ');
+  element.innerHTML = _.join(['mergesort', D], ' ');
 
   return element;
 }
