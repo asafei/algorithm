@@ -18,5 +18,19 @@ function insertionsort(A,n){
 	return A;
 }
 
-export { insertionsort };
+function insertsort(A,left,right){
+	let temp;
+	for(let i=left;i<=right;i++){
+		temp=A[i];
+		//遍历i之前的元素
+		let j;
+		for(j=i;j>left && A[j-1]>temp;j--){
+			A[j]=A[j-1];
+		}
+		A[j]=temp;
+	}
+	return A;
+}
+
+export { insertionsort , insertsort};
 //写原型的笔记
